@@ -22,6 +22,12 @@ Fallback for untagged development:
 
 `https://github.com/xhdtn8070/mock-scene.git?path=/LocalPackages/org.tikim.mockscene#main`
 
+If you are installing through OpenUPM after the registry entry is live, use:
+
+```bash
+openupm add org.tikim.mockscene
+```
+
 ## Authoring workflow
 
 1. Save the target scene.

@@ -62,9 +62,11 @@ MockScene은 Java의 Spring Profile처럼, 플레이 전에 특정 씬에 어떤
 
 ### 2. OpenUPM 방식
 
-MockScene은 OpenUPM 게시를 고려한 문서와 메타데이터를 준비해두었지만, 아직 OpenUPM에 실제로 등록된 상태는 아닙니다.
+MockScene의 OpenUPM 등록 PR은 `2026-04-16 KST`에 머지되었습니다.
+다만 머지 직후에는 패키지 페이지와 레지스트리 반영이 잠깐 지연될 수 있어서,
+`org.tikim.mockscene`가 아직 보이지 않으면 우선 위 Git 설치 방식을 쓰고 잠시 뒤 다시 확인하면 됩니다.
 
-게시가 끝나면 아래처럼 설치할 수 있게 됩니다.
+레지스트리 반영이 끝나면 아래처럼 설치하면 됩니다.
 
 ```bash
 openupm add org.tikim.mockscene
@@ -89,7 +91,8 @@ openupm add org.tikim.mockscene
 }
 ```
 
-OpenUPM 등록 전까지는 Git 설치 방식을 사용하면 됩니다.
+> [!NOTE]
+> `NaughtyAttributes`는 이미 OpenUPM에 올라가 있으므로, 실제로 MockScene 페이지가 열린 뒤에는 OpenUPM 설치 경로가 가장 깔끔합니다.
 
 ## 씬 기준 사용 흐름
 
@@ -144,9 +147,9 @@ MockScene은 현재 에디터 기반 씬 시나리오 관리까지 준비되어 
 - 주입 동작은 의도적으로 에디터 전용입니다.
 - Active 프리셋은 전역 프로필이 아니라 씬 소유 설정 자산에 저장됩니다.
 - Git 설치 시 `NaughtyAttributes`를 먼저 넣어야 합니다.
-- OpenUPM 설치는 실제 게시 이후에만 사용할 수 있습니다.
+- OpenUPM 노출은 머지 직후 잠깐 지연될 수 있습니다.
 
-## 릴리즈와 OpenUPM 준비 상태
+## OpenUPM 상태
 
 이 저장소는 공개 패키지 배포를 위한 기본 준비를 갖춘 상태입니다.
 
@@ -154,13 +157,15 @@ MockScene은 현재 에디터 기반 씬 시나리오 관리까지 준비되어 
 - 문서, 체인지로그, 라이선스 URL 메타데이터 포함
 - `1.0.0` 기준 `CHANGELOG.md` 포함
 - 태그 기반 Git 설치 예시 제공
+- OpenUPM 등록 PR 머지 완료: [openupm/openupm#6410](https://github.com/openupm/openupm/pull/6410)
 
-실제 게시를 진행할 때는 아래 순서를 추천합니다.
+OpenUPM 확인 링크:
 
-1. `v1.0.0` 같은 semver 태그를 생성하고 push합니다.
-2. 태그 기준 Git URL 설치가 잘 되는지 확인합니다.
-3. [OpenUPM package add form](https://openupm.com/packages/add/)으로 패키지를 제출합니다.
-4. 게시가 끝나면 README의 publish-ready 문구를 실제 OpenUPM 링크로 바꿉니다.
+- 패키지 페이지: [openupm.com/packages/org.tikim.mockscene](https://openupm.com/packages/org.tikim.mockscene/)
+- 레지스트리 엔드포인트: [package.openupm.com/org.tikim.mockscene](https://package.openupm.com/org.tikim.mockscene)
+
+위 링크가 아직 `404`라면 대개 인덱싱이 끝나지 않은 상태입니다.
+급하게 써야 한다면 `#v1.0.0` Git 설치를 먼저 사용하는 것이 가장 안전합니다.
 
 ## 로드맵
 

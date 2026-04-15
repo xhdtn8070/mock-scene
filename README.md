@@ -3,7 +3,7 @@
 [![Unity](https://img.shields.io/badge/Unity-6000.0%2B-black?logo=unity)](https://unity.com/)
 [![UPM](https://img.shields.io/badge/UPM-ready-2ea44f)](./LocalPackages/org.tikim.mockscene/package.json)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![OpenUPM](https://img.shields.io/badge/OpenUPM-publish--ready-00a8ff)](#release-and-openupm-readiness)
+[![OpenUPM](https://img.shields.io/badge/OpenUPM-submitted-00a8ff)](#openupm-status)
 
 [한국어 문서](./docs/README.ko.md) · [Package README](./LocalPackages/org.tikim.mockscene/README.md)
 
@@ -65,11 +65,14 @@ If you are testing before a release tag exists, use the branch fallback:
 > [!TIP]
 > Use `#main` only when you intentionally want the latest branch state. Prefer semver tags such as `#v1.0.0` for stable teams and CI environments.
 
-### Option B. OpenUPM after publication
+### Option B. OpenUPM
 
-MockScene is documented to be OpenUPM-ready, but it is not published there yet.
+The OpenUPM registration PR for MockScene was merged on April 16, 2026 (KST).
+The package page and registry entry can take a little time to finish indexing after
+the merge, so if `org.tikim.mockscene` is not visible yet, use the Git install
+above and try OpenUPM again a bit later.
 
-Once the package has been published, you will be able to install it with:
+Once the registry entry is live, install it with:
 
 ```bash
 openupm add org.tikim.mockscene
@@ -94,7 +97,9 @@ Or by adding the scoped registry manually:
 }
 ```
 
-Until OpenUPM publication is complete, use the Git installation flow above.
+> [!NOTE]
+> `NaughtyAttributes` is already available on OpenUPM, so the OpenUPM install path
+> is the best long-term option once the package listing becomes visible.
 
 ## Scene-Based Workflow
 
@@ -149,9 +154,9 @@ The runtime injector currently stops at a rich diagnostic log. That is intention
 - Injection is editor-only by design.
 - The active preset is stored in a scene-owned settings asset, not in a global profile.
 - Git installation requires `NaughtyAttributes` first.
-- OpenUPM installation is not available until the package is actually published.
+- OpenUPM availability can lag briefly behind the metadata merge while the registry and website finish indexing.
 
-## Release and OpenUPM Readiness
+## OpenUPM Status
 
 This repository is prepared for public package distribution:
 
@@ -159,13 +164,15 @@ This repository is prepared for public package distribution:
 - The package metadata includes documentation, changelog, and license URLs.
 - `CHANGELOG.md` is versioned with `1.0.0`.
 - The recommended Git install format uses semver tags such as `v1.0.0`.
+- The OpenUPM registration PR has already been merged: [openupm/openupm#6410](https://github.com/openupm/openupm/pull/6410).
 
-When you are ready to publish:
+OpenUPM links:
 
-1. Create and push a semver tag such as `v1.0.0`.
-2. Verify the tagged package installs from Git URL.
-3. Submit the package through the [OpenUPM package add form](https://openupm.com/packages/add/).
-4. Replace the "publish-ready" wording in this README with the real OpenUPM package page link.
+- Package page: [openupm.com/packages/org.tikim.mockscene](https://openupm.com/packages/org.tikim.mockscene/)
+- Registry endpoint: [package.openupm.com/org.tikim.mockscene](https://package.openupm.com/org.tikim.mockscene)
+
+If those URLs still return `404`, the package is usually just waiting for indexing.
+For immediate use, the Git tag install remains the safest fallback.
 
 ## Roadmap
 
