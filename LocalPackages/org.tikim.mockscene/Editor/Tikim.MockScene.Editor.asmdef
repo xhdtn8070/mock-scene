@@ -1,0 +1,18 @@
+{
+  "name": "Tikim.MockScene.Editor",
+  "rootNamespace": "Tikim.MockScene.Editor",
+  "references": [
+    "Tikim.MockScene.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

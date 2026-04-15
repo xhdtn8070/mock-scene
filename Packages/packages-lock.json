@@ -10,6 +10,13 @@
       },
       "hash": "73eb27aeccfa8e0676eaf3304136e9b85953d913"
     },
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "15035ad90aba29cffd7bb5f9e4d67724d5e5878c"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.4",
       "depth": 0,
@@ -299,6 +306,14 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "org.tikim.mockscene": {
+      "version": "file:../LocalPackages/org.tikim.mockscene",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dbrizov.naughtyattributes": "2.1.4"
+      }
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

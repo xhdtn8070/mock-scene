@@ -1,0 +1,28 @@
+{
+  "name": "org.tikim.mockscene",
+  "displayName": "Tikim MockScene",
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "description": "Scene-scoped mock scenario management tools for editor play mode validation.",
+  "documentationUrl": "https://github.com/xhdtn8070/mock-scene#readme",
+  "changelogUrl": "https://github.com/xhdtn8070/mock-scene/blob/main/LocalPackages/org.tikim.mockscene/CHANGELOG.md",
+  "licensesUrl": "https://github.com/xhdtn8070/mock-scene/blob/main/LICENSE",
+  "keywords": [
+    "unity",
+    "upm",
+    "editor-tool",
+    "mock-data",
+    "testing",
+    "scene-management"
+  ],
+  "author": {
+    "name": "Tikim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xhdtn8070/mock-scene.git"
+  },
+  "dependencies": {
+    "com.dbrizov.naughtyattributes": "2.1.4"
+  }
+}

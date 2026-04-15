@@ -1,0 +1,16 @@
+{
+  "name": "Tikim.MockScene.Runtime",
+  "rootNamespace": "Tikim.MockScene",
+  "references": [
+    "NaughtyAttributes.Core"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
