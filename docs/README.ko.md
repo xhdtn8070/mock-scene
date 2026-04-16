@@ -62,11 +62,12 @@ MockScene은 Java의 Spring Profile처럼, 플레이 전에 특정 씬에 어떤
 
 ### 2. OpenUPM 방식
 
-MockScene의 OpenUPM 등록 PR은 `2026-04-16 KST`에 머지되었습니다.
-다만 머지 직후에는 패키지 페이지와 레지스트리 반영이 잠깐 지연될 수 있어서,
-`org.tikim.mockscene`가 아직 보이지 않으면 우선 위 Git 설치 방식을 쓰고 잠시 뒤 다시 확인하면 됩니다.
+MockScene은 이제 OpenUPM에서 바로 설치할 수 있습니다.
 
-레지스트리 반영이 끝나면 아래처럼 설치하면 됩니다.
+- 패키지 페이지: [openupm.com/packages/org.tikim.mockscene](https://openupm.com/packages/org.tikim.mockscene/)
+- 레지스트리 엔드포인트: [package.openupm.com/org.tikim.mockscene](https://package.openupm.com/org.tikim.mockscene)
+
+설치는 아래처럼 하면 됩니다.
 
 ```bash
 openupm add org.tikim.mockscene
@@ -92,7 +93,7 @@ openupm add org.tikim.mockscene
 ```
 
 > [!NOTE]
-> `NaughtyAttributes`는 이미 OpenUPM에 올라가 있으므로, 실제로 MockScene 페이지가 열린 뒤에는 OpenUPM 설치 경로가 가장 깔끔합니다.
+> `NaughtyAttributes`는 이미 OpenUPM에 올라가 있으므로, 이제는 OpenUPM 설치 경로가 새 프로젝트 기준 가장 깔끔합니다.
 
 ## 씬 기준 사용 흐름
 
@@ -147,7 +148,6 @@ MockScene은 현재 에디터 기반 씬 시나리오 관리까지 준비되어 
 - 주입 동작은 의도적으로 에디터 전용입니다.
 - Active 프리셋은 전역 프로필이 아니라 씬 소유 설정 자산에 저장됩니다.
 - Git 설치 시 `NaughtyAttributes`를 먼저 넣어야 합니다.
-- OpenUPM 노출은 머지 직후 잠깐 지연될 수 있습니다.
 
 ## OpenUPM 상태
 
@@ -158,14 +158,7 @@ MockScene은 현재 에디터 기반 씬 시나리오 관리까지 준비되어 
 - `1.0.0` 기준 `CHANGELOG.md` 포함
 - 태그 기반 Git 설치 예시 제공
 - OpenUPM 등록 PR 머지 완료: [openupm/openupm#6410](https://github.com/openupm/openupm/pull/6410)
-
-OpenUPM 확인 링크:
-
-- 패키지 페이지: [openupm.com/packages/org.tikim.mockscene](https://openupm.com/packages/org.tikim.mockscene/)
-- 레지스트리 엔드포인트: [package.openupm.com/org.tikim.mockscene](https://package.openupm.com/org.tikim.mockscene)
-
-위 링크가 아직 `404`라면 대개 인덱싱이 끝나지 않은 상태입니다.
-급하게 써야 한다면 `#v1.0.0` Git 설치를 먼저 사용하는 것이 가장 안전합니다.
+- MockScene은 현재 OpenUPM에서 `org.tikim.mockscene`으로 설치 가능합니다.
 
 ## 로드맵
 
